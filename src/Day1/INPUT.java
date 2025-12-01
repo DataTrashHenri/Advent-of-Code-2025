@@ -1,3 +1,5 @@
+package Day1;
+
 public class INPUT {
     public static String INPUT = "R9\n" +
             "R19\n" +

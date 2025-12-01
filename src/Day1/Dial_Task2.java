@@ -1,7 +1,9 @@
-public class Dial_Day_1 {
+package Day1;
+
+public class Dial_Task2 {
     private int current_rotation;
     private int hits;
-    public Dial_Day_1(){
+    public Dial_Task2(){
         current_rotation = 50;
         hits = 0;
     }
@@ -17,6 +19,7 @@ public class Dial_Day_1 {
         for (int i = 0; i < delta; i++) {
             if (current_rotation == 99) {
                 current_rotation = 0;
+                if((i+1)!=delta) hits++;
             }else {
                 current_rotation++;
             }
@@ -25,6 +28,9 @@ public class Dial_Day_1 {
     }
     private void rotate_counter_clockwise(int delta) {
         for (int i = 0; i < delta; i++) {
+            if (current_rotation == 1){
+                if((i+1)!=delta) hits++;
+            }
             if (current_rotation == 0) {
                 current_rotation = 99;
             }else {
